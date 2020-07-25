@@ -1,0 +1,284 @@
+
+(base) C:\Users\chakanc>python
+Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello World")
+Hello World
+>>> x=12
+>>> x = x*x
+>>> print(x)
+144
+>>> x
+144
+>>> x="HW"
+>>> x
+'HW'
+>>> help()
+
+Welcome to Python 3.6's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at https://docs.python.org/3.6/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+help> exit
+Help on Quitter in module _sitebuiltins object:
+
+exit = class Quitter(builtins.object)
+ |  Methods defined here:
+ |
+ |  __call__(self, code=None)
+ |      Call self as a function.
+ |
+ |  __init__(self, name, eof)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  __repr__(self)
+ |      Return repr(self).
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+help>
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+>>> x
+'HW'
+>>> Print(x)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Print' is not defined
+>>> del x
+>>> x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
+>>> x=100
+>>> x
+100
+>>> y=x
+>>> y
+100
+>>> y=10
+>>> y
+10
+>>> x
+100
+>>> y
+10
+>>> x=100000000000000000000
+>>> x
+100000000000000000000
+>>> x=x*2
+>>> x
+200000000000000000000
+>>> type(x)
+<class 'int'>
+>>> id(x)
+2275814794064
+>>> y=2+10j
+>>> z=2-10j
+>>> x=y*z
+>>> x
+(104+0j)
+>>> id(x)
+2275818399920
+>>> t=True
+>>> t
+True
+>>> varstr="dd ff ggg"
+>>> varstr[2]
+' '
+>>> varstr[3]
+'f'
+>>> varstr[::2]
+'d fgg'
+>>> varstr[::1]
+'dd ff ggg'
+>>> x = varstr*3
+>>> x
+'dd ff gggdd ff gggdd ff ggg'
+>>> print(d in x)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'd' is not defined
+>>> print("d" in x)
+True
+>>> print(varstr in x)
+True
+>>> print(varstr not in x)
+False
+>>> print("Hello %s" %varstr)
+Hello dd ff ggg
+>>> print("Hello %s" %x)
+Hello dd ff gggdd ff gggdd ff ggg
+>>> print("Hello %s %s" %x %varstr)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: not enough arguments for format string
+>>> varStr
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'varStr' is not defined
+>>> varstr
+'dd ff ggg'
+>>> varStr=varstr.replace("d","k")
+>>> varStr
+'kk ff ggg'
+>>> varStr=varStr.replace("k","K")
+>>> varStr
+'KK ff ggg'
+>>> print("Hello %s %s" %x, %varstr)
+  File "<stdin>", line 1
+    print("Hello %s %s" %x, %varstr)
+                            ^
+SyntaxError: invalid syntax
+>>> print("Hello %s %s" %x%varstr)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: not enough arguments for format string
+>>> print(varstr.upper())
+DD FF GGG
+>>> varstr.split(" ")
+['dd', 'ff', 'ggg']
+>>> strarr=varstr.split(" ")
+>>> strarr
+['dd', 'ff', 'ggg']
+>>> strarr[0]
+'dd'
+>>> strarr[2]
+'ggg'
+>>> strarr[5]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> source="How is the day"
+>>> result = ("How" in source)
+>>> result
+True
+>>> result = ("How1" in source)
+>>> result
+False
+>>> result = ("ni" in source[-13:])
+>>> result
+False
+>>> result = ("in" in source[-13:])
+>>> result
+False
+>>> source[-13:]
+'ow is the day'
+>>> result = ("in" in source[-1:])
+>>> result
+False
+>>> result = ("ni" in source[-1:])
+>>> result
+False
+>>> source[-1:]
+'y'
+>>> source[-1]
+'y'
+>>> source[:-1]
+'How is the da'
+>>> s1="sdf"
+>>> s2="srt"
+>>> result = (s1[0] == s2[0])
+>>> result
+True
+>>> s2="Srt"
+>>> result = (s1[0] == s2[0])
+>>> result
+False
+>>> result = (s1[0].upper() == s2[0].upper())
+>>> result
+True
+>>> s1="Dog"
+>>> s2="Cat"
+>>> in=4
+  File "<stdin>", line 1
+    in=4
+     ^
+SyntaxError: invalid syntax
+>>> md=4
+>>> print(s1+s2)
+DogCat
+>>> print(source.reverse())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'reverse'
+>>> target=s1+ {} + s2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not dict
+>>> target=s1+ '{}' + s2
+>>> result=target.format(md)
+>>> result
+'Dog4Cat'
+>>> target=s1+ '{}' + s2+ '{}' + '{}'
+>>> result=target.format(md,md+1,md+2)
+>>> result
+'Dog4Cat56'
+>>> ("ta" in result[::-1])
+True
+>>> ("at" in result[::-1])
+False
+>>> varlist = [2,"hello",8.79,["Python",5]]
+>>> varlist[0]
+2
+>>> type(varlist)
+<class 'list'>
+>>> type(varlist[1])
+<class 'str'>
+>>> varlist[1]+varlist[3][0]
+'helloPython'
+>>> target = varlist[1]+ '{}' + varlist[3][0]
+>>> result=target.format(3)
+>>> result
+'hello3Python'
+>>> result=target.format(" ")
+>>> result
+'hello Python'
+>>> result = result * 5
+>>> result
+'hello Pythonhello Pythonhello Pythonhello Pythonhello Python'
+>>> varlist * 5
+[2, 'hello', 8.79, ['Python', 5], 2, 'hello', 8.79, ['Python', 5], 2, 'hello', 8.79, ['Python', 5], 2, 'hello', 8.79, ['Python', 5], 2, 'hello', 8.79, ['Python', 5]]
+>>> varlist[4:6]
+[]
+>>> varlist[1:2]
+['hello']
+>>> varlist[1:3]
+['hello', 8.79]
+>>> l1=[2,4,6]
+>>> varlist.append(l1)
+>>> varlist
+[2, 'hello', 8.79, ['Python', 5], [2, 4, 6]]
+>>> varlist.extend(l1)
+>>> varlist
+[2, 'hello', 8.79, ['Python', 5], [2, 4, 6], 2, 4, 6]
+>>> tupl=(2,1,4,5)
+>>> tupl[2]
+4
+>>> numbers = {"one":1, "two":2}
+>>> numbers["one"]
+1
+>>> numbers[1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 1
+>>>
